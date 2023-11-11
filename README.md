@@ -1,6 +1,10 @@
 # Simple Addition Calculator
 
-This Android application represents a straightforward basic calculator capable of performing addition operations exclusively. The app processes user-input expressions using the String `split` method to execute addition operations.
+This Android application represents a straightforward basic calculator capable of performing addition operations exclusively. The app processes user-input expressions using the `Split string` to execute addition operations.
+
+<br />
+
+![Screenshot](https://github.com/mustafakbaser/Addition-Calculator-Java/blob/master/Screenshot.png)
 
 ## Features
 
