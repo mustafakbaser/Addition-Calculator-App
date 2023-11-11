@@ -4,7 +4,7 @@ This Android application represents a straightforward basic calculator capable o
 
 <br />
 
-![Screenshot](https://github.com/mustafakbaser/Addition-Calculator-Java/blob/master/Screenshot.png)
+![Screenshot](https://github.com/mustafakbaser/Addition-Calculator-Java/blob/master/in-app-screenshot.png)
 
 ## Features
 
