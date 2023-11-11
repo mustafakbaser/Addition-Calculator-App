@@ -16,12 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        //setContentView(binding.getRoot());
-        View view = binding.getRoot();
-        setContentView(view);
+        setContentView(binding.getRoot());
 
         currentInput = new StringBuilder();
 
+        setButtonClickListener(binding.button0);
         setButtonClickListener(binding.button1);
         setButtonClickListener(binding.button2);
         setButtonClickListener(binding.button3);
@@ -34,7 +33,15 @@ public class MainActivity extends AppCompatActivity {
         setButtonClickListener(binding.buttonEquals);
         setButtonClickListener(binding.buttonPlus);
         setButtonClickListener(binding.buttonClear);
-        setButtonClickListener(binding.button0);
+
+        // ConstraintLayout'a tıklandığında buttonEquals ile aynı fonksiyonu çalıştıracak,
+        // böylece buton için ayrılan alanın dışındaki geniş bölümde de calculateResults() fonksiyonunu çağıracak.
+        binding.equalsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculateResult();
+            }
+        });
     }
 
     private void setButtonClickListener(Button button) {
